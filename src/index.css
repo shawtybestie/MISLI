@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer base {
+  /* ТЕМА 1: LOFI (По умолчанию) */
+  body.theme-lofi {
+    background-image: url('/Lofi.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  /* ТЕМА 2: ТЕМНАЯ (Чистый черный минимализм) */
+  body.theme-dark {
+    background-color: #000000;
+    background-image: none;
+  }
+
+  /* ТЕМА 3: СВЕТЛАЯ */
+  body.theme-light {
+    background-color: #f4f4f5;
+    background-image: none;
+  }
+}
