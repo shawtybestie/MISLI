@@ -13,11 +13,13 @@ export default defineConfig({
 
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite' // <-- Вернули импорт стилей!
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss(), // <-- Вернули плагин Tailwind v4 в сборщик!
+    tailwindcss(),
   ],
+  base: '/MISLI/', // <-- ТАК облачный сервер поймет, куда загружать стили и js!
 })
+
