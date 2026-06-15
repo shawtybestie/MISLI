@@ -55,7 +55,8 @@ export default function App() {
   if (user === undefined) return null;
 
   return (
-    <BrowserRouter>
+    /* Добавили basename, чтобы роутер корректно обрабатывал вложенные ссылки на GitHub Pages */
+    <BrowserRouter basename="/MISLI">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/auth" element={user ? <Navigate to="/app" /> : <Auth setUser={setUser} />} />
